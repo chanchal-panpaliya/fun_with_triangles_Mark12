@@ -1,0 +1,203 @@
+
+.nav-funtriangle-header-container{
+    width: 100%;
+    height: 10vh;
+    background: rgb(154, 155, 158);
+    /* padding: 0px; */
+    font-family: 'Roboto',sans-serif;
+}
+
+.nav-funtriangle-header{
+    display: inline-block;
+    /* padding: 0px; */
+    width: 80vw;
+    position: absolute;
+    top:1vh;
+    padding-left: 2%;
+}
+
+.nav-funtriangle-header-title{
+    color: white;
+    position: absolute;
+    font-size: 1.9rem;
+    padding-top: 1%;
+}
+
+.nav-funtriangle-header-link-container{
+    right: 0;
+}
+
+.nav-funtriangle-header-link{
+    list-style-type: none;
+    /* margin: 0;
+    padding:0; */
+    overflow: hidden;
+    /* position: relative; */
+    float: right;
+    padding-right: 4%;
+}
+
+.nav-funtriangle-header-link-name{
+    display: inline;
+    float: left;
+}
+
+.nav-funtriangle-header-link-page{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-funtriangle-header-link-page:hover{
+    color:rgb(15, 11, 11);
+}
+
+/* .Quiz_render_container{
+ 
+} */
+
+.Quiz_container_display{
+    width: 80%;
+    padding-top: 9%;
+    padding-left: 10%;
+}
+
+.Quiz_que{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.Quiz_options{
+    font-size: 1rem;
+    padding-top: 3%;
+}
+
+.Quiz_multiple_options{
+    font-size: 1rem;
+    padding-top: 1%; 
+}
+
+.Quiz-MobileStepper{
+    padding-top: 6%;
+}
+
+.Quiz-DisplayResult{
+   padding-top: 15%;
+   padding-left: 35%;
+}
+
+/* /////is triangle */
+
+.isTriangle-container{
+  padding-top: 2%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.isTriangle-title{
+   font-size: 1.5rem;
+}
+
+.isTriangle-sub-title{
+    padding-top: 1%;
+    font-size: 0.8rem;
+}
+
+.isTriangle-TextField1 ,.isTriangle-TextField2 ,.isTriangle-TextField3 {
+ padding-top: 2%;
+}
+
+.isTriangle-button{
+    padding-top: 1%;
+}
+
+.isTriangle-button > .MuiButton-contained {
+    background:rgba(255, 255, 0, 0.1)
+}
+
+.isTriangle-button > .MuiButton-contained:hover {
+    background:rgb(211, 208, 208);
+    color:white;
+}
+
+.isTriangle-result_text{
+    padding-top: 2%;
+}
+
+
+/* ///////////////Hypotenuse */
+
+.Hypotenuse-container{
+    padding-top: 4%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: sans-serif;
+}
+.Hypotenuse-title{
+    font-size: 1.5rem; 
+}
+.Hypotenuse-subtitle{
+    padding-top: 2%;
+    font-size: 0.8rem;
+    width: 30%;
+    padding-left: 35%;
+}
+
+.Hypotenuse-formuatext{
+    padding-top: 2%;
+    font-size: 0.8rem;
+}
+
+.Hypotenuse-base , .Hypotenuse-height{
+    padding-top: 2%;
+}
+
+.Hypotenuse-button{
+    padding-top: 2%;
+}
+
+.Hypotenuse-button  > .MuiButton-contained{
+    background:rgba(255, 255, 0, 0.1)   
+}
+
+.Hypotenuse-button > .MuiButton-contained:hover {
+    background:rgb(211, 208, 208);
+    color:white;
+}
+
+.Hypotenuse-displayresult{
+    padding-top: 2%; 
+}
+
+/*------------Calculate-Area----------------*/
+
+.Calculate-Area{
+    padding-top: 4%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.Calculate-Area-title{
+    font-size: 1.5rem; 
+}
+
+.Calculate-Area-formula{
+    padding-top: 2%;
+    font-size: 0.8rem;
+}
+
+.Calculate-Area-base , .Calculate-Area-height , .Calculate-Area-button ,.Calculate-Area-displayresult{
+    padding-top: 2%;
+}
+
+.Calculate-Area-button >
+ .MuiButton-contained{
+    background:rgba(255, 255, 0, 0.1)   
+}
