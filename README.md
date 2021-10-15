@@ -1,5 +1,5 @@
 Triangle 
-Built using : ReactJs , Material UI , Material - Icon , etc .
+Built using : ReactJs .
 
 This application's main objective is to help young students get familiar with the concept of triangles as well as provide them a way of testing the knowledge on the same.It is a collection of 4 mini applications:
 
