@@ -1,4 +1,3 @@
-import { Button, TextField } from "@material-ui/core";
 import { Component } from "react";
 
 class AreaOfTriangle extends Component{
@@ -28,26 +27,29 @@ class AreaOfTriangle extends Component{
             <div className="Calculate-Area">
                 <div className="Calculate-Area-title"> Calculate Area </div>
                 <div className="Calculate-Area-formula"> Area of a triangle = 1/2(Base * Height) </div>
+
                 <div className="Calculate-Area-base">
-                <TextField id="areaoftriangle" type="number" label="Enter base value" variant="filled" onChange={(e)=>{this.setState({base:e.target.value,displaymsg:false})}}
-                        error={this.state.base < 0} helperText={ this.state.base < 0 ? 'Only +ve number and greater then 0' : '' }/> 
+                    <h5> Base </h5>
+                    <input id="areaoftriangle" type="number" placeholder="Enter base value"  onChange={(e)=>{this.setState({base:e.target.value,displaymsg:false})}} style={{width:'20%',height:'5vh'}}/> 
+                        <br/>{this.state.base < 0 ? <small style={{color:'red'}}>Only +ve number and greater then 0 </small> : ""}
                 </div>
+
                 <div className="Calculate-Area-height">
-                <TextField id="areaoftriangle" type="number" label="Enter height value" variant="filled" onChange={(e)=>{this.setState({height:e.target.value,displaymsg:false})}}
-                        error={this.state.height < 0} helperText={ this.state.height < 0 ? 'Only +ve number and greater then 0' : '' }/> 
+                    <h5> Height </h5>
+                    <input id="areaoftriangle" type="number" placeholder="Enter height value"  onChange={(e)=>{this.setState({height:e.target.value,displaymsg:false})}} style={{width:'20%',height:'5vh'}}/> 
+                       <br/>{this.state.height < 0 ? <small style={{color:'red'}}>Only +ve number and greater then 0 </small> : ""}
                 </div>
 
                 <div className="Calculate-Area-button">
-                {(this.state.base==="" || this.state.height==="") ? 
-                   <span style={{cursor:'no-drop'}}>
-                      <Button className="Calculate-Area-button-onclick" variant="contained"  disabled> Calculate Area </Button>
-                   </span>
-                   :
-                   ((this.state.base>0 && this.state.height>0))?
-                   <Button className="Calculate-Area-button-onclick" variant="contained"  onClick={this.calculate}> Calculate Area </Button> :
-                   <div> positive number only and greater then 0</div>
-                   }
-   
+                    {(this.state.base==="" || this.state.height==="") ? 
+                    
+                        <button  style={{cursor:'no-drop',color:'black',width:'20%',height:'5vh'}}  disabled> Calculate Area </button>
+                    
+                    :
+                    ((this.state.base>0 && this.state.height>0))?
+                    <button className="Calculate-Area-button-onclick" style={{width:'20%',height:'5vh'}} onClick={this.calculate}> Calculate Area </button> :
+                    <div> positive number only and greater then 0</div>
+                    }
                 </div>
 
                 <div className="Calculate-Area-displayresult">

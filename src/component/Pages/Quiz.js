@@ -1,10 +1,4 @@
 import { Component } from "react";
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Button from '@material-ui/core/Button';
-import Replay from '@material-ui/icons/Replay';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from "@material-ui/lab/Alert";
-
 
 
 const Quiz_Set = [
@@ -132,21 +126,11 @@ class Quiz extends Component{
        if(notattempcount<=24 && notattempcount>16){
               this.setState({booleanonsubmit:false,Total:count})
               this.setState({catchmsg:"Please attempt all questions",errormsg:"error",open:true})
+              alert("Please attempt all questions")
        }else{
            this.setState({booleanonsubmit:true,Total:count})
        }
     }
-
-
-    Snackbarrender =() =>{
-        return(
-          this.state.open? <Snackbar open={this.state.open} autoHideDuration={5000}  onClose={this.handleClose} style={{marginTop:'0px',width:'100%'}}>
-           <MuiAlert elevation={6} variant="filled" onClose={this.handleClose} severity={this.state.errormsg} >
-             {this.state.catchmsg}
-           </MuiAlert>
-         </Snackbar> : null
-        )
-      }
 
 render(){
 return(
@@ -154,7 +138,7 @@ return(
     { this.state.booleanonsubmit ? 
         <div className="Quiz-DisplayResult"> 
            <h2> The score is {this.state.Total} Out Of 8 </h2>
-             <Button onClick={()=>{this.setState({booleanonsubmit:false,activeStep:0,Quiz_Set : Quiz_Set,Total:0})}}> <Replay/> Try again </Button> 
+             <button onClick={()=>{this.setState({booleanonsubmit:false,activeStep:0,Quiz_Set : Quiz_Set,Total:0})}}> Try again </button> 
         </div>
      :
      <div className="Quiz_container_display"> 
@@ -195,28 +179,30 @@ return(
           })}
 
        <div className="Quiz-MobileStepper">
-        <MobileStepper  variant="dots" steps={this.state.Quiz_Set.length} position="static" activeStep={this.state.activeStep}
-            nextButton={
-                this.state.activeStep === 7 ? 
-                <Button size="small" onClick={this.onsubmit}>
+               <div style={{width:'100%',backgroundColor:'#D0D0D0'}}>
+             
+           
+                <button size="small" onClick={this.handleBack} style={{height:'5vh',width:'5%'}} disabled={this.state.activeStep === 0}>
+                    Back
+                </button>
+
+                { this.state.activeStep === 7 ? 
+                <button size="small" onClick={this.onsubmit} style={{position:'absolute',right:'10%',height:'5vh',width:'5%'}}>
                  Submit
-                </Button>
+                </button>
                 :
-                <Button size="small" onClick={this.handleNext} disabled={this.state.activeStep === this.state.Quiz_Set.length}>
+                <button size="small" onClick={this.handleNext} style={{position:'absolute',right:'10%',height:'5vh',width:'5%'}} disabled={this.state.activeStep === this.state.Quiz_Set.length}>
                 Next
-                </Button>
+                </button>
 
             }
-            backButton={
-                <Button size="small" onClick={this.handleBack} disabled={this.state.activeStep === 0}>
-                    Back
-                </Button>
-            }
-        />
+
+             </div>
+        
         </div>
      </div>
     }
-     {this.Snackbarrender()}
+     {/* {this.Snackbarrender()} */}
   </div>
    )
   }

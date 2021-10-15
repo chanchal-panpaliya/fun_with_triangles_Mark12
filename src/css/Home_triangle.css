@@ -115,11 +115,11 @@
     padding-top: 1%;
 }
 
-.isTriangle-button > .MuiButton-contained {
+.isTriangle-button-onclick {
     background:rgba(255, 255, 0, 0.1)
 }
 
-.isTriangle-button > .MuiButton-contained:hover {
+.isTriangle-button-onclick:hover {
     background:rgb(211, 208, 208);
     color:white;
 }
@@ -193,11 +193,14 @@
     font-size: 0.8rem;
 }
 
-.Calculate-Area-base , .Calculate-Area-height , .Calculate-Area-button ,.Calculate-Area-displayresult{
-    padding-top: 2%;
+.Calculate-Area-base , .Calculate-Area-height ,.Calculate-Area-displayresult{
+    padding-top: 1%;
 }
 
-.Calculate-Area-button >
- .MuiButton-contained{
-    background:rgba(255, 255, 0, 0.1)   
+.Calculate-Area-button-onclick {
+    background:rgba(255, 255, 0, 0.1) ;
+}
+
+.Calculate-Area-button{
+    padding-top: 2%; 
 }

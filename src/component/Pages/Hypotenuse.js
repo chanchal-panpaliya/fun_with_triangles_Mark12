@@ -1,6 +1,5 @@
 import { Component } from "react";
-import TextField from '@material-ui/core/TextField';
-import { Button } from "@material-ui/core";
+
 
 class Hypotenuse extends Component{
 
@@ -36,31 +35,31 @@ class Hypotenuse extends Component{
 
                
             
-                <form  noValidate autoComplete="off">
+               
                     <div className="Hypotenuse-base"> 
-                        <TextField id="filled-basic" type="number" label="Enter base value (a)" variant="filled" onChange={(e)=>{this.setState({base:e.target.value,hypotenuse:""})}}
-                        error={this.state.base < 0} helperText={ this.state.base < 0 ? 'Only positive number' : '' }/> 
+                        <input id="filled-basic" type="number" placeholder="Enter base value (a)" variant="filled" onChange={(e)=>{this.setState({base:e.target.value,hypotenuse:""})}} style={{width:'20%',height:'5vh'}}/> 
+                           {this.state.base < 0 ? <small style={{color:'red'}}>Only positive number </small> : ""}
                     </div>
                     <div className="Hypotenuse-height">
-                        <TextField id="filled-basic" type="number" label="Enter height value (b)" variant="filled" onChange={(e)=>{this.setState({height:e.target.value,hypotenuse:""})}}
-                        error={this.state.height < 0} helperText={ this.state.height < 0 ? 'Only positive number' : '' } /> 
+                        <input id="filled-basic" type="number" placeholder="Enter height value (b)" variant="filled" onChange={(e)=>{this.setState({height:e.target.value,hypotenuse:""})}} style={{width:'20%',height:'5vh'}}/> 
+                           {this.state.height < 0 ? <small style={{color:'red'}}>Only positive number </small> : ""}
                     </div>
 
                     <div className="Hypotenuse-button">
 
                     {(this.state.base==="" || this.state.height==="") ?
-                    <span style={{cursor:'no-drop'}}>
-                     <Button className="isTriangle-button-onclick" variant="contained" disabled> 
+                   
+                     <button className="isTriangle-button-onclick" style={{cursor:'no-drop',color:'black',width:'20%',height:'5vh'}} disabled> 
                         Calculate hypotenuse 
-                     </Button>
-                    </span>
+                     </button>
+                  
                    :
                    ((this.state.base>=0 && this.state.height>=0))?
-                   <Button className="isTriangle-button-onclick" variant="contained"  onClick={this.Calculate}> Calculate hypotenuse </Button> :
+                   <button className="isTriangle-button-onclick" style={{width:'20%',height:'5vh'}} onClick={this.Calculate}> Calculate hypotenuse </button> :
                    <div> positive number only </div>
                    }
                       </div> 
-                </form>
+              
 
                  <div className="Hypotenuse-formuatext"> The formula used here is: hypotenuse = <b>√(base² + height²)</b> </div>
 

@@ -1,9 +1,10 @@
 import './App.css';
 import { Component } from 'react';
-import  Facebook  from '@material-ui/icons/Facebook';
-import  Twitter  from '@material-ui/icons/Twitter';
-import  LinkedIn  from '@material-ui/icons/LinkedIn';
-import  GitHub  from '@material-ui/icons/GitHub';
+
+import FacebookIcon from './img/icons/facebook.png';
+import TwitterIcon from './img/icons/twitter.png';
+import LinkedInIcon from './img/icons/linkedin.png';
+import GithubIcon from './img/icons/github.png'; 
 
 import Home from './component/Home.js';
 class App extends Component {
@@ -19,22 +20,22 @@ class App extends Component {
                 <div className="menu__socialItems">
                   <a className="menu__socialLink" target="_blank" href='https://www.facebook.com/chanchal.panpaliya'> 
                     <span className="menu__socialIcon">
-                      <Facebook  style={{color:'grey'}}/>
+                      <img style={{width:'8%',paddingTop:'2%'}} src={FacebookIcon} alt="facebooklink"/>
                     </span>
                   </a> <br/><br/>
                   <a className="menu__socialLink" target="_blank" href='https://twitter.com/CPanpaliya'> 
                      <span className="menu__socialIcon">
-                        <Twitter style={{color:'grey'}}/>
+                        <img style={{width:'8%',paddingTop:'2%'}} src={TwitterIcon} alt="twitterlink"/>
                      </span>
                   </a><br/><br/>
                   <a className="menu__socialLink" target="_blank" href='https://www.linkedin.com/in/chanchal-panpaliya-0b0436112'> 
                     <span className="menu__socialIcon">
-                      <LinkedIn style={{color:'grey'}}/> 
+                       <img style={{width:'8%',paddingTop:'2%'}} src={LinkedInIcon} alt="linkedinlink"/>
                       </span>
                   </a> <br/><br/>
                   <a className="menu__socialLink" target="_blank" href='https://github.com/chanchal-panpaliya'> 
                     <span className="menu__socialIcon">
-                      <GitHub style={{color:'grey'}}/>
+                      <img style={{width:'8%',paddingTop:'2%'}} src={GithubIcon} alt="githublink"/>
                     </span>
                 </a>
               </div>
